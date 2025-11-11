@@ -9,7 +9,7 @@ async function registerUser(e) {
   const email = document.getElementById("reg-email").value.trim();
   const password = document.getElementById("reg-password").value.trim();
 
-  const res = await fetch(`${API_URL}/api/register`, {
+  const res = await fetch(`${API_URL}/api/auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, email, password })
@@ -30,7 +30,7 @@ async function loginUser(e) {
   const usernameOrEmail = document.getElementById("login-username").value.trim();
   const password = document.getElementById("login-password").value.trim();
 
-  const res = await fetch(`${API_URL}/api/login`, {
+  const res = await fetch(`${API_URL}/api/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ usernameOrEmail, password })
