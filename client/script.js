@@ -1,4 +1,4 @@
-const API_URL = "https://scribbleupload.onrender.com"; // backend base URL
+const API_URL = "http://localhost:4000/api"; // backend base URL // backend base URL
 let authToken = localStorage.getItem("token") || null;
 
 // ---------- USER REGISTRATION ----------
